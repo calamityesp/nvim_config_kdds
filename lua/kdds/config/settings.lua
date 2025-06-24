@@ -53,6 +53,7 @@ vim.opt.list = true -- Show whitespace characters
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" } -- Customise the representation of whitespace characters
 
 vim.diagnostic.config({ virtual_text = true })
+vim.g.python3_host_prog = vim.fn.exepath("python3")
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
