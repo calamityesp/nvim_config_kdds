@@ -5,3 +5,4 @@ require("config.autocmd")
 require("config.remap")
 require("config.settings")
 require("config.options")
+
