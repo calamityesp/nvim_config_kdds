@@ -1,3 +1,7 @@
+-- ***********************************************************************************************
+-- *** vim-tmux-navigator  --add vim motions to moving between vim buffers and tmux buffers
+-- ***********************************************************************************************
+
 return {
     "christoomey/vim-tmux-navigator",
     cmd = {
