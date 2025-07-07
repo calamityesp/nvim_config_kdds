@@ -47,6 +47,7 @@ return {
                 "go",
                 "python",
                 "c_sharp",
+                "java",
             },
             incremental_selection = {
                 enable = true,

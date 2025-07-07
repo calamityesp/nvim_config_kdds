@@ -6,14 +6,17 @@ return {
     opts = {
         -- bigfile = { enabled = true },
         -- dashboard = { enabled = true },
-        explorer = { enabled = true, replace_netrw = true },
+        -- explorer = { enabled = true, replace_netrw = true },
         -- indent = { enabled = true },
         -- input = { enabled = true },
         -- notifier = {
         --   enabled = true,
         --   timeout = 3000,
         -- },
+
+        -- Replacement for Telescope
         picker = { enabled = true },
+
         -- quickfile = { enabled = true },
         -- scope = { enabled = true },
         -- scroll = { enabled = true },
@@ -26,142 +29,140 @@ return {
         -- },
     },
     keys = {
-        -- -- Top Pickers & Explorer
-        -- {
-        --     "<leader><space>",
-        --     function()
-        --         Snacks.picker.smart()
-        --     end,
-        --     desc = "Smart Find Files",
-        -- },
-        -- {
-        --     "<leader>,",
-        --     function()
-        --         Snacks.picker.buffers()
-        --     end,
-        --     desc = "Buffers",
-        -- },
-        -- {
-        --     "<leader>/",
-        --     function()
-        --         Snacks.picker.grep()
-        --     end,
-        --     desc = "Grep",
-        -- },
-        -- {
-        --     "<leader>:",
-        --     function()
-        --         Snacks.picker.command_history()
-        --     end,
-        --     desc = "Command History",
-        -- },
-        -- {
-        --     "<leader>n",
-        --     function()
-        --         Snacks.picker.notifications()
-        --     end,
-        --     desc = "Notification History",
-        -- },
+        -- -- Pickers
         {
-            "<leader>ee",
+            "<leader><space>",
             function()
-                Snacks.explorer()
+                Snacks.picker.smart()
             end,
-            desc = "File Explorer",
+            desc = "Smart Find Files",
         },
-        -- -- find
+        {
+            "<leader>ff",
+            function()
+                Snacks.picker.files()
+            end,
+            desc = "Find Files",
+        },
+
+        {
+            "<leader>fb",
+            function()
+                Snacks.picker.buffers()
+            end,
+            desc = "Buffers",
+        },
+        {
+            "<leader>fg",
+            function()
+                Snacks.picker.grep()
+            end,
+            desc = "Grep",
+        },
+        {
+            "<leader>fh",
+            function()
+                Snacks.picker.command_history()
+            end,
+            desc = "Command History",
+        },
+        {
+            "<leader>n",
+            function()
+                Snacks.picker.notifications()
+            end,
+            desc = "Notification History",
+        },
+        {
+            "<leader>fc",
+            function()
+                Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
+            end,
+            desc = "Find Config File",
+        },
+        {
+            "<leader>fp",
+            function()
+                Snacks.picker.projects()
+            end,
+            desc = "Projects",
+        },
+        {
+            "<leader>fr",
+            function()
+                Snacks.picker.recent()
+            end,
+            desc = "Recent",
+        },
+
+        -- GIT Picker Keybindings
+        {
+            "<leader>fgf",
+            function()
+                Snacks.picker.git_files()
+            end,
+            desc = "Find Git Files",
+        },
+
+        {
+            "<leader>fgb",
+            function()
+                Snacks.picker.git_branches()
+            end,
+            desc = "Git Branches",
+        },
+        {
+            "<leader>fgl",
+            function()
+                Snacks.picker.git_log()
+            end,
+            desc = "Git Log",
+        },
+        {
+            "<leader>fgL",
+            function()
+                Snacks.picker.git_log_line()
+            end,
+            desc = "Git Log Line",
+        },
+        {
+            "<leader>fgs",
+            function()
+                Snacks.picker.git_status()
+            end,
+            desc = "Git Status",
+        },
+        {
+            "<leader>fgS",
+            function()
+                Snacks.picker.git_stash()
+            end,
+            desc = "Git Stash",
+        },
+        {
+            "<leader>fgd",
+            function()
+                Snacks.picker.git_diff()
+            end,
+            desc = "Git Diff (Hunks)",
+        },
+        {
+            "<leader>fgf",
+            function()
+                Snacks.picker.git_log_file()
+            end,
+            desc = "Git Log File",
+        },
+
+        -- Explorer (if I ever get it working correctly. Otherwise sticking to nvim-tree)
         -- {
-        --     "<leader>fb",
+        --     "<leader>ee",
         --     function()
-        --         Snacks.picker.buffers()
+        --         Snacks.explorer()
         --     end,
-        --     desc = "Buffers",
-        -- },
-        -- {
-        --     "<leader>fc",
-        --     function()
-        --         Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
-        --     end,
-        --     desc = "Find Config File",
-        -- },
-        -- {
-        --     "<leader>ff",
-        --     function()
-        --         Snacks.picker.files()
-        --     end,
-        --     desc = "Find Files",
-        -- },
-        -- {
-        --     "<leader>fg",
-        --     function()
-        --         Snacks.picker.git_files()
-        --     end,
-        --     desc = "Find Git Files",
-        -- },
-        -- {
-        --     "<leader>fp",
-        --     function()
-        --         Snacks.picker.projects()
-        --     end,
-        --     desc = "Projects",
-        -- },
-        -- {
-        --     "<leader>fr",
-        --     function()
-        --         Snacks.picker.recent()
-        --     end,
-        --     desc = "Recent",
+        --     desc = "File Explorer",
         -- },
         -- -- git
-        -- {
-        --     "<leader>gb",
-        --     function()
-        --         Snacks.picker.git_branches()
-        --     end,
-        --     desc = "Git Branches",
-        -- },
-        -- {
-        --     "<leader>gl",
-        --     function()
-        --         Snacks.picker.git_log()
-        --     end,
-        --     desc = "Git Log",
-        -- },
-        -- {
-        --     "<leader>gL",
-        --     function()
-        --         Snacks.picker.git_log_line()
-        --     end,
-        --     desc = "Git Log Line",
-        -- },
-        -- {
-        --     "<leader>gs",
-        --     function()
-        --         Snacks.picker.git_status()
-        --     end,
-        --     desc = "Git Status",
-        -- },
-        -- {
-        --     "<leader>gS",
-        --     function()
-        --         Snacks.picker.git_stash()
-        --     end,
-        --     desc = "Git Stash",
-        -- },
-        -- {
-        --     "<leader>gd",
-        --     function()
-        --         Snacks.picker.git_diff()
-        --     end,
-        --     desc = "Git Diff (Hunks)",
-        -- },
-        -- {
-        --     "<leader>gf",
-        --     function()
-        --         Snacks.picker.git_log_file()
-        --     end,
-        --     desc = "Git Log File",
-        -- },
         -- -- Grep
         -- {
         --     "<leader>sb",

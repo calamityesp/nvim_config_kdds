@@ -8,6 +8,15 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     main = "ibl",
     opts = {
-        indent = { char = "|" },
+        indent = { char = "┊" },
+    },
+    keys = {
+        {
+            "<leader>ll",
+            function()
+                vim.cmd("IBLToggle")
+            end,
+            desc = "Smart Find Files",
+        },
     },
 }

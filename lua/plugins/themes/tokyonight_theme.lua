@@ -7,14 +7,16 @@ return {
         ------------------------------------------------------
         -- local bg = "#011628"
         -- local bg = "#ffaf5f"
-        local bg = "#1a1b26" -- Color of the Active Background
+        -- local bg = "#1a1b26" -- Color of the Active Background
+        local bg = "#000102" -- Color of the Active Background
 
         ------------------------------------------------------
         -----------     local inactive bg  -------------------
         ------------------------------------------------------
         -- local bg_dark = "#562e05"
         -- local bg_dark = "#011423"
-        local bg_dark = "#1a1b26"
+        -- local bg_dark = "#1a1b26"
+        local bg_dark = "#000102" -- Color of the Active Background
 
         ------------------------------------------------------
         ------------- line highlight color -------------------
@@ -22,7 +24,8 @@ return {
         -- local bg_dark = "#000D18" -- Color of the inactivea background
         -- local bg_highlight = "#143652"
         -- local bg_highlight = "#512200"
-        local bg_highlight = "#4c341c"
+        -- local bg_highlight = "#4c341c"
+        local bg_highlight = "#FF5500"
 
         local bg_search = "#0A64AC"
 
@@ -30,13 +33,17 @@ return {
         -- local bg_search = "#4c341c"
         -- local bg_visual = "#275378"
         -- local bg_visual = "#ffc16c"
-        local bg_visual = "#4c341c"
+        -- local bg_visual = "#4c341c"
+        local bg_visual = "#FF5500"
         -- ------------------------------------------------------------------
 
         local fg = "#CBE0F0"
         local fg_dark = "#B4D0E9"
-        local fg_gutter = "#627E97"
-        local border = "#547998"
+        -- local fg_gutter = "#627E97"
+        -- local fg_gutter = "#627E97"
+        local fg_gutter = "#000102"
+        -- local border = "#547998"
+        local border = "#000102"
 
         require("tokyonight").setup({
             style = "night",

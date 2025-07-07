@@ -11,7 +11,7 @@ vim.opt.incsearch = true -- Highlight matches as you type the search.
 
 -- display text options
 vim.opt.wrap = false -- Display long lines as one line (no wrapping)
-vim.opt.colorcolumn = "80" -- Mark column 120 for line length management
+vim.opt.colorcolumn = "" -- Mark column 120 for line length management
 vim.opt.scrolloff = 10 -- Minimum number of lines above and below the cursor
 vim.opt.inccommand = "split" -- Show effects of substitutions incrementally
 
@@ -35,7 +35,7 @@ vim.opt.background = "dark" -- make color scheme dark that can be light or dark
 -- vim editor options
 vim.opt.mouse = "a" -- Enable mouse in all modes
 vim.opt.mousemodel = "extend" -- Set mouse behavior to extend
-vim.opt.cursorline = true -- Highlight the line of the cursor
+vim.opt.cursorline = false -- Highlight the line of the cursor
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true -- Search case insensitively
