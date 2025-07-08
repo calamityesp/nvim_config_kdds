@@ -124,8 +124,8 @@ return {
             ensure_installed = {
                 "lua_ls",
                 -- "intelephense",
-                "ts_ls",
-                "eslint",
+                -- "ts_ls",
+                -- "eslint",
             },
             handlers = {
                 -- this first function is the "default handler"
@@ -157,13 +157,13 @@ return {
 
         mason_tool.setup({
             ensure_installed = {
-                "prettier", -- prettier formatter
+                -- "prettier", -- prettier formatter
                 "stylua", -- lua formatter
-                "isort", -- python formatter
-                "black", -- python formatter
-                "pylint", -- python  linting
-                "eslint_d", -- js linting
-                "mypy",
+                -- "isort", -- python formatter
+                -- "black", -- python formatter
+                -- "pylint", -- python  linting
+                -- "eslint_d", -- js linting
+                -- "mypy",
                 --            "clang-format", -- c  language formating
             },
         })
