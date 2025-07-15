@@ -93,6 +93,8 @@ nnoremap <leader>ps :action ShowSettings<cr>
 " turn off vim.. use at own risk
 nnoremap <leader>qq :action VimPluginToggle<cr>
 
+nnoremap gcc :action CommentByLineComment<cr>
+
 
 " ----------------------------------------------------
 "
