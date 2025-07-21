@@ -23,7 +23,7 @@ vim.opt.scrolloff = 20 -- Minimum number of lines above and below the cursor
 --file options
 vim.opt.swapfile = false -- Disable swapfile creation
 vim.opt.backup = false -- Disable backup file creation
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- Directory for undo files
+-- vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- Directory for undo files
 vim.opt.undofile = true -- Enable persistent undo
 vim.opt.updatetime = 50 -- Time in milliseconds to write to swap file
 
