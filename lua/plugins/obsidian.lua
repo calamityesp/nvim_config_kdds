@@ -32,7 +32,7 @@ return {
                 },
                 {
                     name = "Handwritten Notes",
-                    path = "~/.oh-my-bash/Obsidian/Calamity_Draw/",
+                    path = "~/.oh-my-kdds/Obsidian/Calamity_Draw/",
                 },
             },
             mappings = {
