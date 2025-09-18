@@ -27,12 +27,16 @@ return {
         obsidian.setup({
             workspaces = {
                 {
-                    name = "Coding References",
-                    path = "/home/calamityesp/OneDrive/Obsidian/Calamity_Notes",
+                    name = "Notes",
+                    path = "~/OneDrive/Obsidian/Calamity_Notes/",
                 },
                 {
-                    name = "Handwritten Notes",
-                    path = "~/.oh-my-kdds/Obsidian/Calamity_Draw/",
+                    name = "Draw",
+                    path = "~/OneDrive/Obsidian/Calamity_Draw/",
+                },
+                {
+                    name = "Thinking",
+                    path = "~/OneDrive/Obsidian/Calamity_Thinking/",
                 },
             },
             mappings = {
@@ -92,5 +96,10 @@ return {
         vim.keymap.set("n", "<leader>oop", function()
             vim.cmd("ObsidianOpen")
         end, { desc = "Open the obsidian editor" })
+
+        -- Select Obsidian Workspace
+        vim.keymap.set("n", "<leader>oow", function()
+            vim.cmd("ObsidianWorkspace")
+        end, { desc = "Select Obsidian Workspace" })
     end,
 }
