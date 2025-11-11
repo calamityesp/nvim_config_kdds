@@ -107,6 +107,9 @@ nnoremap <leader>ff :action SearchEverywhere<CR>
 " Show Nav bar
 nnoremap <leader>fn :action ShowNavBar
 
+" OPen Terminal
+nnoremap <leader>\\ :action ActivateTerminalToolWindow
+
 " ----------------------------------------------------
 
 
