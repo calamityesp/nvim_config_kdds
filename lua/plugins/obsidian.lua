@@ -28,15 +28,15 @@ return {
             workspaces = {
                 {
                     name = "Notes",
-                    path = "~/OneDrive/Obsidian/Calamity_Notes/",
+                    path = "~/Obsidian/Calamity_Notes/",
                 },
                 {
                     name = "Draw",
-                    path = "~/OneDrive/Obsidian/Calamity_Draw/",
+                    path = "~/Obsidian/Calamity_Draw/",
                 },
                 {
                     name = "Thinking",
-                    path = "~/OneDrive/Obsidian/Calamity_Thinking/",
+                    path = "~/Obsidian/Calamity_Thinking/",
                 },
             },
             mappings = {
