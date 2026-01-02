@@ -109,3 +109,7 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR><cmd>NvimTreeRefresh<CR>", { des
 
 -- MISC
 keymap.set("v", "<leader>tt", [[:%!tr -s " " | column -t -s '|' -o '|' <CR>]], { desc = "Align markdown table" })
+
+-- Movement remaps
+keymap.set("n", "<A-j>", "5j", { desc = "Move 5 spaces down" })
+keymap.set("n", "<A-k>", "5k", { desc = "Move 5 spaces up" })

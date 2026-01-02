@@ -21,76 +21,91 @@ return {
     --
     --     -- see below for full list of optional dependencies 👇
     -- },
-    -- config = function()
-    --     local obsidian = require("obsidian")
-    --
-    --     obsidian.setup({
-    --         workspaces = {
-    --             {
-    --                 name = "Coding References",
-    --                 path = "/home/calamityesp/OneDrive/Obsidian/Calamity_Notes",
-    --             },
-    --             {
-    --                 name = "Handwritten Notes",
-    --                 path = "~/.oh-my-bash/Obsidian/Calamity_Draw/",
-    --             },
-    --         },
-    --         mappings = {
-    --             ["<leader>och"] = {
-    --                 action = function()
-    --                     return require("obsidian").util.toggle_checkbox()
-    --                 end,
-    --                 opts = { buffer = true, desc = "toggle checkboxes" },
-    --             },
-    --         },
-    --         templates = {
-    --             folder = "TEMPLATES",
-    --             date_format = "%Y-%m-%d-%a",
-    --             time_format = "%H:%M",
-    --         },
-    --     })
-    --
-    --     --        Obsidian related keymaps  -------------------
-    --     -- Open notes in new tab
-    --     vim.keymap.set("n", "<leader>oot", function()
-    --         vim.cmd("tabnew")
-    --         vim.cmd("ObsidianSearch")
-    --     end, { desc = "Open note in new tab" })
-    --
-    --     -- Open notes in new split
-    --     vim.keymap.set("n", "<leader>oos", function()
-    --         vim.cmd("vsplit")
-    --         vim.cmd("ObsidianSearch")
-    --     end, { desc = "open note in new split" })
-    --
-    --     vim.keymap.set("n", "<leader>ooo", function()
-    --         vim.cmd("ObsidianSearch")
-    --     end, { desc = "open new note in current buffer" })
-    --
-    --     -- Template command
-    --     vim.keymap.set("n", "<leader>ot", function()
-    --         vim.cmd("ObsidianTemplate")
-    --     end)
-    --
-    --     -- New Obsidian Note Insert
-    --     vim.keymap.set("n", "<leader>oon", function()
-    --         vim.cmd("ObsidianNew")
-    --     end, { desc = "Create a new obsidian note" })
-    --
-    --     -- Search for buffer by tag id
-    --     vim.keymap.set("n", "<leader>ott", function()
-    --         vim.cmd("ObsidianTags")
-    --     end, { desc = "search by tag" })
-    --
-    --     -- Create a new template file
-    --     vim.keymap.set("n", "<leader>otn", function()
-    --         local templateName = vim.fn.input("TemplateName : ")
-    --         vim.cmd("ObsidianNew TEMPLATES/" .. templateName .. " template.md")
-    --     end, { desc = "create a new template " })
-    --
-    --     -- Open Obsidian editor
-    --     vim.keymap.set("n", "<leader>oop", function()
-    --         vim.cmd("ObsidianOpen")
-    --     end, { desc = "Open the obsidian editor" })
-    -- end,
+    dependencies = {
+        -- Required.
+        "nvim-lua/plenary.nvim",
+
+        -- see below for full list of optional dependencies 👇
+    },
+    config = function()
+        local obsidian = require("obsidian")
+
+        obsidian.setup({
+            workspaces = {
+                {
+                    name = "Notes",
+                    path = "~/Obsidian/Calamity_Notes/",
+                },
+                {
+                    name = "Draw",
+                    path = "~/Obsidian/Calamity_Draw/",
+                },
+                {
+                    name = "Thinking",
+                    path = "~/Obsidian/Calamity_Thinking/",
+                },
+            },
+            mappings = {
+                ["<leader>och"] = {
+                    action = function()
+                        return require("obsidian").util.toggle_checkbox()
+                    end,
+                    opts = { buffer = true, desc = "toggle checkboxes" },
+                },
+            },
+            templates = {
+                folder = "TEMPLATES",
+                date_format = "%Y-%m-%d-%a",
+                time_format = "%H:%M",
+            },
+        })
+
+        --        Obsidian related keymaps  -------------------
+        -- Open notes in new tab
+        vim.keymap.set("n", "<leader>oot", function()
+            vim.cmd("tabnew")
+            vim.cmd("ObsidianSearch")
+        end, { desc = "Open note in new tab" })
+
+        -- Open notes in new split
+        vim.keymap.set("n", "<leader>oos", function()
+            vim.cmd("vsplit")
+            vim.cmd("ObsidianSearch")
+        end, { desc = "open note in new split" })
+
+        vim.keymap.set("n", "<leader>ooo", function()
+            vim.cmd("ObsidianSearch")
+        end, { desc = "open new note in current buffer" })
+
+        -- Template command
+        vim.keymap.set("n", "<leader>ot", function()
+            vim.cmd("ObsidianTemplate")
+        end)
+
+        -- New Obsidian Note Insert
+        vim.keymap.set("n", "<leader>oon", function()
+            vim.cmd("ObsidianNew")
+        end, { desc = "Create a new obsidian note" })
+
+        -- Search for buffer by tag id
+        vim.keymap.set("n", "<leader>ott", function()
+            vim.cmd("ObsidianTags")
+        end, { desc = "search by tag" })
+
+        -- Create a new template file
+        vim.keymap.set("n", "<leader>otn", function()
+            local templateName = vim.fn.input("TemplateName : ")
+            vim.cmd("ObsidianNew TEMPLATES/" .. templateName .. " template.md")
+        end, { desc = "create a new template " })
+
+        -- Open Obsidian editor
+        vim.keymap.set("n", "<leader>oop", function()
+            vim.cmd("ObsidianOpen")
+        end, { desc = "Open the obsidian editor" })
+
+        -- Select Obsidian Workspace
+        vim.keymap.set("n", "<leader>oow", function()
+            vim.cmd("ObsidianWorkspace")
+        end, { desc = "Select Obsidian Workspace" })
+    end,
 }
