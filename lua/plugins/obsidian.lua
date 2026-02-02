@@ -40,7 +40,7 @@ return {
                 },
                 {
                     name = "work",
-                    path = "~/Documents/Work_Notes/",
+                    path = "~/Obsidian_Work/Work_Notes/",
                 },
             },
             mappings = {
