@@ -57,7 +57,7 @@ return {
                 time_format = "%H:%M",
             },
             picker = {
-                name = Snacks.picker,
+                name = "snacks.nvim",
                 note_mappings = {
                     new = "<C-x>",
                     insert_link = "<C-l>",
