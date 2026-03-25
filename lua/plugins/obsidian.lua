@@ -56,6 +56,17 @@ return {
                 date_format = "%Y-%m-%d-%a",
                 time_format = "%H:%M",
             },
+            picker = {
+                name = snacks.picker,
+                note_mappings = {
+                    new = "<C-x>",
+                    insert_link = "<C-l>",
+                },
+                tag_mappings = {
+                    tag_note = "<C-x>",
+                    insert_tag = "<C-l>",
+                },
+            },
         })
 
         --        Obsidian related keymaps  -------------------
