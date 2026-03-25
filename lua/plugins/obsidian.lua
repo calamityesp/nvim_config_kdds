@@ -57,7 +57,7 @@ return {
                 time_format = "%H:%M",
             },
             picker = {
-                name = snacks.picker,
+                name = Snacks.picker,
                 note_mappings = {
                     new = "<C-x>",
                     insert_link = "<C-l>",
