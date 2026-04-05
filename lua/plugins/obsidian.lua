@@ -56,7 +56,7 @@ return {
                 time_format = "%H:%M",
             },
             picker = {
-                name = nil,
+                name = "telescope.nvim",
                 note_mappings = {
                     new = "<C-x>",
                     insert_link = "<C-l>",

@@ -5,8 +5,8 @@ return {
     ---@type snacks.Config
     opts = {
         bigfile = { enabled = true },
-        dashboard = { enabled = true },
-        explorer = { enabled = true, replace_netrw = true },
+        dashboard = require('plugins.config_files.snacks_dashboard'),
+        explorer = { enabled = false, replace_netrw = false },
         indent = { enabled = true },
         input = { enabled = true },
         notifier = {
