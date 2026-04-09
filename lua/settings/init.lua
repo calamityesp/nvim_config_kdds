@@ -5,3 +5,4 @@ vim.g.have_nerd_font = true
 require("config.remap")
 require("config.settings")
 require("config.options")
+require("config.lsp")

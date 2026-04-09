@@ -3,6 +3,14 @@ return {
     lazy = false,
     build = ":TSUpdate",
     config = function()
-      require('nvim-treesitter').install { 'rust', 'javascript', 'zig', 'java', 'lua' }
+        require("nvim-treesitter").install({
+            "rust",
+            "javascript",
+            "zig",
+            "java",
+            "lua",
+            "html",
+            "markdown",
+        })
     end,
 }
