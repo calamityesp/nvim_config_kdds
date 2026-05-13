@@ -41,6 +41,10 @@ return {
                     name = "Thinking",
                     path = "~/Obsidian/Calamity_Thinking/",
                 },
+                {
+                  name = "Work",
+                  path = "~/Obsidian_Work/Work_Notes"
+                },
             },
             mappings = {
                 ["<leader>och"] = {
