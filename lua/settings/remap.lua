@@ -92,6 +92,11 @@ keymap.set("n", "<C-Right>", "<C-w>l", { desc = "Move focus to the right window"
 keymap.set("n", "<C-Down>", "<C-w>j", { desc = "Move focus to the lower window" })
 keymap.set("n", "<C-Up>", "<C-w>k", { desc = "Move focus to the upper window" })
 
+keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Move focus to the left window" })
+keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Move focus to the right window" })
+keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Move focus to the lower window" })
+keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Move focus to the upper window" })
+
 -- Split window keymaps
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split Screen Vertically" }) -- split screen vertically
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split Screen Horizontally" }) -- split screen horizontally
