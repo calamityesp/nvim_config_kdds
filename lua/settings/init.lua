@@ -2,7 +2,6 @@
 vim.g.have_nerd_font = true
 
 -- require("autocmd")
-require("settings.remap")
-require("settings.settings")
-require("settings.options")
-
+require("config.remap")
+require("config.settings")
+require("config.options")

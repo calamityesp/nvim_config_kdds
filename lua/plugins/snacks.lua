@@ -4,33 +4,35 @@ return {
     lazy = false,
     ---@type snacks.Config
     opts = {
-        -- bigfile = { enabled = true },
-        -- dashboard = { enabled = true },
-        -- explorer = { enabled = true, replace_netrw = true },
-        -- indent = { enabled = true },
-        -- input = { enabled = true },
-        -- notifier = {
-        --   enabled = true,
-        --   timeout = 3000,
-        -- },
-
-        -- Terminal
-        terminal = require("plugins.config.snacks_terminal_config"),
-
+        bigfile = { enabled = true },
+        dashboard = { enabled = true },
+        explorer = { enabled = true, replace_netrw = true },
+        indent = { enabled = true },
+        input = { enabled = true },
+        notifier = {
+            enabled = true,
+            timeout = 3000,
+        },
         -- Replacement for Telescope
-        picker = { enabled = true },
+        picker = {
+            enabled = true,
+            ui_select = true,
+        },
 
-        -- quickfile = { enabled = true },
-        -- scope = { enabled = true },
-        -- scroll = { enabled = true },
-        -- statuscolumn = { enabled = true },
-        -- words = { enabled = true },
-        -- styles = {
-        --     notification = {
-        --         -- wo = { wrap = true } -- Wrap notifications
-        --     },
-        -- },
+        quickfile = { enabled = true },
+        scope = { enabled = true },
+        scroll = { enabled = true },
+        statuscolumn = { enabled = true },
+        words = { enabled = true },
+        styles = {
+            notification = {
+                wo = { wrap = true }, -- Wrap notifications
+            },
+        },
     },
+    config = function(_, opts)
+        require("snacks").setup(opts)
+    end,
     keys = {
         -- -- Pickers
         {
